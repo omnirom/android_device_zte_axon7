@@ -12,7 +12,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_axon7.mk \
-    $(LOCAL_DIR)/omni_axon7.mk
+# Inherit Omni configs
+$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit from idol3 device
+$(call inherit-product, device/zte/axon7/full_axon7.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := omni_axon7

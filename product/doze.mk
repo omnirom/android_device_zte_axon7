@@ -1,3 +1,3 @@
 # Doze mode
-PRODUCT_PACKAGES += \
-    ZteDoze
+#PRODUCT_PACKAGES += \
+#    ZteDoze
